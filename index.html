@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100b25">
-  <meta name="description" content="MiniFind — one search, infinite discoveries. Explore websites, images, videos, science, technology and more.">
+  <meta name="description" content="MiniFind — one search, infinite discoveries. Search the web, explore topics, and save useful links.">
   <title>MiniFind — One Search. Infinite Discoveries.</title>
   <style>
     :root{--bg:#0b0820;--panel:rgba(24,18,52,.74);--panel2:rgba(20,24,57,.78);--line:rgba(255,255,255,.12);--text:#f7f4ff;--muted:#bcb6d8;--pink:#ff6fd8;--purple:#a78bfa;--blue:#62c8ff;--mint:#7ef5d4;--shadow:0 22px 70px rgba(0,0,0,.28)}
@@ -12,11 +12,17 @@
     a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}.container{width:min(1120px,calc(100% - 36px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(11,8,32,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:1.22rem;letter-spacing:-.04em}.brand-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--pink));box-shadow:0 0 28px rgba(167,139,250,.35);font-size:21px}.brand span em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.nav-links{display:flex;align-items:center;gap:24px;color:#d6d0ec;font-size:.9rem}.nav-links a:hover{color:white}.nav-actions{display:flex;align-items:center;gap:9px}.btn{border:0;border-radius:999px;padding:13px 20px;font-weight:750;color:white;background:linear-gradient(110deg,#8661ff,#d75ce5 55%,#ed6db4);box-shadow:0 10px 28px rgba(164,94,241,.24);transition:transform .18s,filter .18s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn:focus-visible,.tab:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}.btn-quiet{border:1px solid var(--line);background:rgba(255,255,255,.05);box-shadow:none}.menu-btn{display:none;border:1px solid var(--line);color:white;background:rgba(255,255,255,.07);padding:9px 12px;border-radius:12px}
     .hero{position:relative;padding:88px 0 62px;text-align:center;isolation:isolate}.orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);pointer-events:none}.orb.one{width:260px;height:260px;left:0;top:50px;background:radial-gradient(circle,rgba(133,89,255,.19),transparent 68%)}.orb.two{width:300px;height:300px;right:0;top:0;background:radial-gradient(circle,rgba(255,91,210,.14),transparent 68%)}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(185,154,255,.25);border-radius:100px;background:rgba(124,80,255,.1);color:#ded5ff;font-size:.83rem;font-weight:650}.pulse{width:7px;height:7px;background:#89ffe1;border-radius:50%;box-shadow:0 0 14px #89ffe1}.hero h1{max-width:900px;margin:23px auto 16px;font-size:clamp(2.65rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.065em}.gradient-text{background:linear-gradient(96deg,#b7a0ff 10%,#7bd7ff 48%,#ff91d7 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:660px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,2.1vw,1.16rem);line-height:1.8}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px 0 19px}.small-note{font-size:.83rem;color:#958db8}
     .preview-wrap{max-width:800px;margin:38px auto 0;perspective:900px}.preview{position:relative;padding:17px;border:1px solid rgba(255,255,255,.16);border-radius:25px;background:linear-gradient(140deg,rgba(45,32,83,.85),rgba(15,24,56,.82));box-shadow:var(--shadow),0 0 75px rgba(111,87,255,.1);transform:rotateX(1deg)}.preview-bar{display:flex;align-items:center;gap:7px;text-align:left;padding:3px 4px 15px;color:#aca4cd;font-size:.76rem}.dot{width:8px;height:8px;border-radius:50%;background:#ff7bae}.dot:nth-child(2){background:#ffd166}.dot:nth-child(3){background:#7ef5d4}.preview-label{margin-left:auto}.preview-content{border-radius:17px;background:rgba(7,10,30,.55);padding:24px;text-align:left}.preview-mini-title{font-size:1.15rem;font-weight:750;margin-bottom:7px}.preview-sub{color:var(--muted);font-size:.88rem;margin-bottom:18px}.preview-search{display:flex;align-items:center;gap:10px;border:1px solid rgba(181,158,255,.38);background:rgba(255,255,255,.045);padding:13px 15px;border-radius:14px;color:#d0cae8}.preview-pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.preview-pills span{font-size:.75rem;padding:7px 10px;border:1px solid var(--line);border-radius:100px;color:#d9d2f1;background:rgba(255,255,255,.04)}
-    section{padding:70px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 30px}.kicker{color:#b6a3ff;font-weight:750;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem}.section-head h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.045em;margin:10px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}.search-panel{padding:23px;border:1px solid rgba(255,255,255,.14);border-radius:26px;background:linear-gradient(140deg,rgba(29,22,64,.86),rgba(15,23,52,.84));box-shadow:var(--shadow)}.search-types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:17px}.tab{border:1px solid transparent;border-radius:100px;padding:10px 15px;background:rgba(255,255,255,.045);color:#c8c0e6;font-weight:650}.tab.active{background:linear-gradient(100deg,rgba(139,102,255,.27),rgba(239,93,202,.16));border-color:rgba(194,156,255,.42);color:white}.search-row{display:flex;gap:10px}.search-row input{min-width:0;flex:1;border:1px solid rgba(193,174,255,.24);border-radius:15px;padding:16px 17px;background:rgba(5,7,24,.55);color:white;outline:none}.search-row input::placeholder{color:#8d86ad}.search-help{font-size:.82rem;color:#a9a2c8;margin:12px 3px 0}.results-area{margin-top:20px;display:grid;gap:12px}.result-card{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:17px;padding:15px;background:rgba(255,255,255,.035)}.result-card:hover{border-color:rgba(173,144,255,.4)}.result-thumb{width:76px;height:76px;object-fit:cover;border-radius:12px;background:rgba(255,255,255,.06);flex-shrink:0}.result-body{min-width:0;flex:1}.result-title{font-weight:750;color:#ece6ff;line-height:1.45}.result-title:hover{color:var(--blue)}.result-desc{color:#aaa3c9;font-size:.88rem;line-height:1.65;margin-top:5px}.result-domain{font-size:.76rem;color:#8bdbd6;margin-top:7px}.result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.mini-btn{border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.05);color:#e7e1fa;padding:7px 10px;font-size:.78rem;font-weight:700}.mini-btn.saved{color:#98ffdc;border-color:rgba(126,245,212,.38)}.status{padding:16px;border:1px dashed rgba(255,255,255,.18);border-radius:14px;color:#bdb5da;line-height:1.6}.hidden{display:none!important}
+    section{padding:70px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 30px}.kicker{color:#b6a3ff;font-weight:750;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem}.section-head h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.045em;margin:10px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}.search-panel{padding:23px;border:1px solid rgba(255,255,255,.14);border-radius:26px;background:linear-gradient(140deg,rgba(29,22,64,.86),rgba(15,23,52,.84));box-shadow:var(--shadow)}.search-types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:17px}.tab{border:1px solid transparent;border-radius:100px;padding:10px 15px;background:rgba(255,255,255,.045);color:#c8c0e6;font-weight:650}.tab.active{background:linear-gradient(100deg,rgba(139,102,255,.27),rgba(239,93,202,.16));border-color:rgba(194,156,255,.42);color:white}.search-row{display:flex;gap:10px}.search-row input{min-width:0;flex:1;border:1px solid rgba(193,174,255,.24);border-radius:15px;padding:16px 17px;background:rgba(5,7,24,.55);color:white;outline:none}.search-row input::placeholder{color:#8d86ad}.search-help{font-size:.82rem;color:#a9a2c8;margin:12px 3px 0}.results-area{margin-top:20px;display:grid;gap:12px}.result-card{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:17px;padding:15px;background:rgba(255,255,255,.035)}.result-card:hover{border-color:rgba(173,144,255,.4)}.result-body{min-width:0;flex:1}.result-title{font-weight:750;color:#ece6ff;line-height:1.45}.result-title:hover{color:var(--blue)}.result-desc{color:#aaa3c9;font-size:.88rem;line-height:1.65;margin-top:5px}.result-domain{font-size:.76rem;color:#8bdbd6;margin-top:7px}.result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.mini-btn{border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.05);color:#e7e1fa;padding:7px 10px;font-size:.78rem;font-weight:700}.mini-btn.saved{color:#98ffdc;border-color:rgba(126,245,212,.38)}.status{padding:16px;border:1px dashed rgba(255,255,255,.18);border-radius:14px;color:#bdb5da;line-height:1.6}.hidden{display:none!important}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.topic-card{position:relative;overflow:hidden;min-height:190px;text-align:left;border:1px solid var(--line);border-radius:21px;padding:21px;background:linear-gradient(150deg,rgba(36,26,75,.82),rgba(17,24,54,.78));color:white;transition:transform .2s,border-color .2s}.topic-card:hover{transform:translateY(-5px);border-color:rgba(179,148,255,.48)}.topic-card:before{content:"";position:absolute;width:125px;height:125px;right:-44px;top:-45px;border-radius:50%;background:var(--glow,rgba(168,139,250,.2));filter:blur(20px)}.topic-icon{font-size:1.8rem;display:inline-grid;place-items:center;width:49px;height:49px;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.06);margin-bottom:18px}.topic-card h3{margin:0 0 7px;font-size:1rem}.topic-card p{margin:0;color:#b8b1d3;font-size:.83rem;line-height:1.55}.topic-arrow{position:absolute;right:17px;bottom:17px;color:#c5b4ff}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.feature{padding:23px;border:1px solid var(--line);border-radius:19px;background:rgba(255,255,255,.035)}.feature-icon{font-size:1.5rem}.feature h3{margin:13px 0 8px;font-size:1.03rem}.feature p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.7}.saved-layout{display:grid;grid-template-columns:1fr .8fr;gap:20px;align-items:start}.saved-box,.email-box{border:1px solid var(--line);border-radius:22px;padding:23px;background:linear-gradient(145deg,rgba(30,24,65,.8),rgba(15,22,49,.72))}.saved-box h3,.email-box h3{margin:0 0 8px;font-size:1.3rem}.saved-box>p,.email-box>p{margin:0 0 17px;color:var(--muted);font-size:.9rem;line-height:1.6}.saved-list{display:grid;gap:10px}.saved-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:11px}.saved-item a{flex:1;min-width:0;overflow-wrap:anywhere;font-size:.87rem;color:#d9d3f5}.empty{padding:17px;color:#a9a2c8;background:rgba(255,255,255,.025);border-radius:12px;font-size:.88rem;line-height:1.6}.local-note{font-size:.78rem!important;color:#9d96bc!important;margin-top:15px!important}.email-tag{display:inline-flex;border:1px solid rgba(126,245,212,.27);background:rgba(126,245,212,.08);color:#9bffe0;border-radius:100px;padding:7px 10px;font-weight:750;font-size:.75rem;margin-bottom:14px}.email-box ul{padding-left:19px;color:#c7c0e4;font-size:.88rem;line-height:1.8}.email-box .btn{margin-top:5px}.footer{border-top:1px solid rgba(255,255,255,.09);padding:30px 0 35px;color:#aaa2c7}.footer-row{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}.footer-brand{font-weight:800;color:white}.footer-links{display:flex;gap:16px;flex-wrap:wrap;font-size:.86rem}.footer-links a:hover{color:white}.copyright{font-size:.8rem;margin-top:18px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);padding:12px 17px;background:#f7f4ff;color:#20153d;border-radius:12px;font-weight:750;font-size:.85rem;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .2s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
     @media(max-width:850px){.nav-links{gap:14px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.saved-layout{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:650px){.container{width:min(100% - 26px,1120px)}.nav{height:67px}.nav-links{display:none;position:absolute;top:67px;left:0;right:0;padding:17px;background:rgba(13,9,36,.97);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:8px 5px}.menu-btn{display:inline-block}.nav-actions .btn{display:none}.hero{padding:65px 0 43px}.hero h1{font-size:clamp(2.6rem,13vw,4.4rem)}.preview-content{padding:17px}.preview{padding:11px}.hero-actions .btn{width:100%}section{padding:53px 0}.search-panel{padding:14px}.search-row{flex-direction:column}.search-row .btn{width:100%}.result-card{gap:10px;padding:12px}.result-thumb{width:58px;height:58px}.grid{gap:10px}.topic-card{padding:16px;min-height:185px}.feature-grid{grid-template-columns:1fr}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(max-width:650px){.container{width:min(100% - 26px,1120px)}.nav{height:67px}.nav-links{display:none;position:absolute;top:67px;left:0;right:0;padding:17px;background:rgba(13,9,36,.97);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:8px 5px}.menu-btn{display:inline-block}.nav-actions .btn{display:none}.hero{padding:65px 0 43px}.hero h1{font-size:clamp(2.6rem,13vw,4.4rem)}.preview-content{padding:17px}.preview{padding:11px}.hero-actions .btn{width:100%}section{padding:53px 0}.search-panel{padding:14px}.search-row{flex-direction:column}.search-row .btn{width:100%}.result-card{gap:10px;padding:12px}.grid{gap:10px}.topic-card{padding:16px;min-height:185px}.feature-grid{grid-template-columns:1fr}.footer-row{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+    .home-gallery{padding-top:26px}.media-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.media-card{min-width:0;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:linear-gradient(145deg,rgba(37,28,77,.85),rgba(14,21,50,.9));box-shadow:0 15px 45px rgba(0,0,0,.16);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;animation:riseIn .7s both}.media-card:nth-child(2){animation-delay:.08s}.media-card:nth-child(3){animation-delay:.16s}.media-card:nth-child(4){animation-delay:.24s}.media-card:hover{transform:translateY(-5px);border-color:rgba(184,151,255,.48);box-shadow:0 22px 54px rgba(0,0,0,.25)}.media-frame{position:relative;overflow:hidden;aspect-ratio:4/3;background:rgba(255,255,255,.05)}.media-frame img,.media-frame video{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}.media-card:hover .media-frame img{transform:scale(1.045)}.media-badge{position:absolute;top:11px;left:11px;padding:6px 9px;border:1px solid rgba(255,255,255,.2);border-radius:99px;background:rgba(12,9,31,.66);backdrop-filter:blur(10px);font-size:.65rem;font-weight:800;letter-spacing:.08em;color:#f8f4ff}.video-badge{left:auto;right:11px}.media-caption{display:grid;gap:5px;padding:14px 15px 16px}.media-caption strong{font-size:.91rem;color:#f4efff}.media-caption span{color:#a9a2c8;font-size:.76rem}.gallery-cta{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:18px;padding:17px 19px;border:1px solid rgba(255,255,255,.1);border-radius:17px;background:linear-gradient(110deg,rgba(134,97,255,.10),rgba(98,200,255,.055),rgba(255,111,216,.08));color:#c6bfdf;font-size:.9rem}.search-screen{min-height:calc(100vh - 115px);padding-top:56px}.search-screen .section-head{margin-bottom:24px}.search-footer{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px;color:#928ab2;font-size:.78rem}.search-footer .btn{padding:10px 15px}.results-area{transition:opacity .2s ease}.status{animation:riseIn .25s ease both}.result-card{animation:riseIn .3s ease both}.search-row input{transition:border-color .2s,box-shadow .2s}.search-row input:focus{border-color:rgba(178,148,255,.72);box-shadow:0 0 0 4px rgba(167,139,250,.11)}.btn,.mini-btn,.tab{transition:transform .18s ease,filter .18s ease,background .18s ease,border-color .18s ease}.btn:active,.mini-btn:active,.tab:active{transform:scale(.98)}section[id]{scroll-margin-top:94px}@keyframes riseIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:900px){.media-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:650px){.media-gallery{gap:10px}.media-card{border-radius:15px}.media-caption{padding:11px}.media-caption strong{font-size:.83rem}.media-caption span{font-size:.7rem}.media-badge{top:8px;left:8px;font-size:.58rem;padding:5px 7px}.gallery-cta{align-items:flex-start;flex-direction:column}.gallery-cta .btn{width:100%}.search-screen{padding-top:35px}.search-footer{align-items:stretch;flex-direction:column}.search-footer .btn{width:100%}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
   </style>
 </head>
 <body>
@@ -26,7 +32,8 @@
   <div class="nav-actions"><button class="btn" onclick="goToSearch()">Get Started ↗</button><button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
-  <section class="hero" id="home"><div class="orb one"></div><div class="orb two"></div><div class="container">
+  <div id="homeView">
+<section class="hero" id="home"><div class="orb one"></div><div class="orb two"></div><div class="container">
     <div class="eyebrow"><span class="pulse"></span> YOUR CURIOSITY, UNLOCKED</div>
     <h1>One Search.<br><span class="gradient-text">Infinite Discoveries.</span></h1>
     <p>Find answers, explore amazing images, watch interesting videos, and discover useful corners of the internet — all starting from one place.</p>
@@ -34,14 +41,17 @@
     <div class="small-note">No account needed to start exploring.</div>
     <div class="preview-wrap" aria-label="MiniFind search preview"><div class="preview"><div class="preview-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="preview-label">minifind • search workspace</span></div><div class="preview-content"><div class="preview-mini-title">What sparks your curiosity?</div><div class="preview-sub">A world of ideas is one question away.</div><div class="preview-search"><span>⌕</span><span>Try “how do black holes work?”</span><span style="margin-left:auto;color:#d8b9ff">↵</span></div><div class="preview-pills"><span>🌐 Web</span><span>🖼️ Images</span><span>🎬 Videos</span><span>✨ Discover</span></div></div></div></div>
   </div></section>
-  <section id="search"><div class="container"><div class="section-head"><div class="kicker">Your search starts here</div><h2>What are you looking for today?</h2><p>Choose a search type, enter a topic, and MiniFind will help you explore. Web, image and video searches open results from external search providers.</p></div>
-    <div class="search-panel"><div class="search-types" role="tablist" aria-label="Search type"><button class="tab active" data-type="web" role="tab" aria-selected="true">🌐 Web</button><button class="tab" data-type="images" role="tab" aria-selected="false">🖼️ Images</button><button class="tab" data-type="videos" role="tab" aria-selected="false">🎬 Videos</button><button class="tab" data-type="wiki" role="tab" aria-selected="false">📚 Quick answers</button></div>
-      <form id="searchForm" class="search-row"><input id="queryInput" type="search" placeholder="Ask anything or search the web..." aria-label="Search terms" autocomplete="off" required maxlength="180"><button class="btn" type="submit">Search ↗</button></form>
-      <p class="search-help" id="searchHelp">Search the wider web using DuckDuckGo, or switch to Quick answers to find Wikipedia article summaries.</p>
-      <div id="resultsArea" class="results-area" aria-live="polite"></div>
+<section class="home-gallery" id="visuals"><div class="container">
+    <div class="section-head"><div class="kicker">A window into the wonderful</div><h2>Little previews. <span class="gradient-text">Big discoveries.</span></h2><p>Take a tiny look around before you start exploring. These visuals live on the welcome page — your search screen stays clean.</p></div>
+    <div class="media-gallery">
+      <article class="media-card"><div class="media-frame"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=82" alt="A glowing nebula and stars in deep space" loading="lazy"><span class="media-badge">SPACE ✦</span></div><div class="media-caption"><strong>Beyond the stars</strong><span>Space · Science · Wonder</span></div></article>
+      <article class="media-card"><div class="media-frame"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=82" alt="Close-up of a technology circuit board" loading="lazy"><span class="media-badge">TECH</span></div><div class="media-caption"><strong>Ideas of tomorrow</strong><span>Technology · Coding</span></div></article>
+      <article class="media-card"><div class="media-frame"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=82" alt="A peaceful mountain lake and green landscape" loading="lazy"><span class="media-badge">OUR WORLD</span></div><div class="media-caption"><strong>Our amazing planet</strong><span>Nature · Places</span></div></article>
+      <article class="media-card video-media"><div class="media-frame"><video controls muted playsinline preload="none" poster="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=82" aria-label="Short sample video of a flower"><source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">Your browser does not support this video.</video><span class="media-badge video-badge">▶ SHORT VIDEO</span></div><div class="media-caption"><strong>A little bloom</strong><span>Press play to preview a short clip</span></div></article>
     </div>
+    <div class="gallery-cta"><span>Ready to find your own discovery?</span><button type="button" class="btn" onclick="goToSearch()">Start searching →</button></div>
   </div></section>
-  <section id="discover"><div class="container"><div class="section-head"><div class="kicker">A little inspiration</div><h2>Explore Something New</h2><p>Your next discovery might be a planet, a clever invention, an amazing place, or a creative idea.</p></div>
+<section id="discover"><div class="container"><div class="section-head"><div class="kicker">A little inspiration</div><h2>Explore Something New</h2><p>Your next discovery might be a planet, a clever invention, an amazing place, or a creative idea.</p></div>
     <div class="grid">
       <button class="topic-card" style="--glow:rgba(113,114,255,.3)" data-topic="science space astronomy planets"><span class="topic-icon">🚀</span><h3>Science & Space</h3><p>Explore planets, the universe and fascinating scientific questions.</p><span class="topic-arrow">↗</span></button>
       <button class="topic-card" style="--glow:rgba(76,205,255,.3)" data-topic="technology coding useful gadgets"><span class="topic-icon">💻</span><h3>Technology</h3><p>Discover coding tutorials, gadgets and digital ideas.</p><span class="topic-arrow">↗</span></button>
@@ -49,14 +59,25 @@
       <button class="topic-card" style="--glow:rgba(255,108,214,.25)" data-topic="creative projects art design photography"><span class="topic-icon">🎨</span><h3>Creativity</h3><p>Find inspiration for art, photography, design and projects.</p><span class="topic-arrow">↗</span></button>
     </div>
   </div></section>
-  <section id="about"><div class="container"><div class="section-head"><div class="kicker">Made for curious minds</div><h2>Why MiniFind?</h2><p>A simple starting point for exploring online, built to work on phones, tablets and computers.</p></div>
-    <div class="feature-grid"><article class="feature"><div class="feature-icon">🧭</div><h3>One Place to Explore</h3><p>Jump from one search box to websites, images, videos and topic ideas.</p></article><article class="feature"><div class="feature-icon">⚡</div><h3>Fast and Smooth</h3><p>A lightweight website with no account required to search.</p></article><article class="feature"><div class="feature-icon">🔖</div><h3>Keep Useful Finds</h3><p>Save search results in this browser and return to them later on the same device.</p></article></div>
+<section id="about"><div class="container"><div class="section-head"><div class="kicker">Made for curious minds</div><h2>Why MiniFind?</h2><p>A simple starting point for exploring online, built to work on phones, tablets and computers.</p></div>
+    <div class="feature-grid"><article class="feature"><div class="feature-icon">🧭</div><h3>One Place to Explore</h3><p>Start with one question, then explore websites and topic ideas. Welcome-page photos and video offer inspiration before you search.</p></article><article class="feature"><div class="feature-icon">⚡</div><h3>Fast and Smooth</h3><p>A lightweight website with no account required to search.</p></article><article class="feature"><div class="feature-icon">🔖</div><h3>Keep Useful Finds</h3><p>Save search results in this browser and return to them later on the same device.</p></article></div>
   </div></section>
-  <section id="saved"><div class="container"><div class="section-head"><div class="kicker">Your personal collection</div><h2>Save it for later</h2><p>Keep handy links for studying, projects, or just exploring. Your saved list stays in this browser on this device.</p></div>
-    <div class="saved-layout"><div class="saved-box"><h3>🔖 Your saved discoveries</h3><p>Save results from Quick answers to build a little collection.</p><div id="savedList" class="saved-list"><div class="empty">Nothing saved yet. Search for a topic, then select “Save” on a result.</div></div><p class="local-note">Note: this list is stored locally in your browser. It does not sync between devices and may be lost if you clear browser data.</p><button class="mini-btn" id="clearSaved" type="button">Clear saved list</button></div>
+<section id="saved"><div class="container"><div class="section-head"><div class="kicker">Your personal collection</div><h2>Save it for later</h2><p>Keep handy links for studying, projects, or just exploring. Your saved list stays in this browser on this device.</p></div>
+    <div class="saved-layout"><div class="saved-box"><h3>🔖 Your saved discoveries</h3><p>Save useful Wikipedia summaries or links from your search to build a little collection.</p><div id="savedList" class="saved-list"><div class="empty">Nothing saved yet. Search for a topic, then select “Save” on a result.</div></div><p class="local-note">Note: this list is stored locally in your browser. It does not sync between devices and may be lost if you clear browser data.</p><button class="mini-btn" id="clearSaved" type="button">Clear saved list</button></div>
       <aside class="email-box"><span class="email-tag">COMING NEXT</span><h3>📩 Email your study pack</h3><p>We can add a feature for people to receive saved notes or answers by email after MiniFind is connected to a secure form/email service.</p><ul><li>Email delivery isn't active in this version.</li><li>This page does not collect or transmit email addresses.</li><li>Never put private API keys or passwords in this website's code.</li></ul><a class="btn btn-quiet" href="#privacy">Read privacy notes</a></aside></div>
   </div></section>
-  <section id="privacy"><div class="container"><div class="section-head"><div class="kicker">Privacy in plain English</div><h2>Your searches, your choice.</h2><p>MiniFind does not ask you to create an account. When you use Web, Images or Videos, your search terms are sent to the selected external search provider. Quick answers uses Wikipedia's public search API. Saved links are kept in local browser storage on your device. MiniFind does not currently collect email addresses.</p></div></div></section>
+<section id="privacy"><div class="container"><div class="section-head"><div class="kicker">Privacy in plain English</div><h2>Your searches, your choice.</h2><p>MiniFind does not ask you to create an account. When you use Web searches send your search terms to Google. Quick answers uses Wikipedia's public search API. Saved links are kept in local browser storage on your device. MiniFind does not currently collect email addresses.</p></div></div></section>
+  </div>
+  <div id="searchView" class="hidden">
+<section id="search" class="search-screen"><div class="container"><div class="section-head"><div class="kicker">Your search starts here</div><h2>What are you looking for today?</h2><p>Type a question, a full sentence, or any topic. MiniFind sends your search to Google, or you can explore Wikipedia quick summaries.</p></div>
+    <div class="search-panel"><div class="search-types" role="tablist" aria-label="Search mode"><button class="tab active" data-type="web" role="tab" aria-selected="true">🌐 Search anything</button><button class="tab" data-type="wiki" role="tab" aria-selected="false">📚 Quick answers</button></div>
+      <form id="searchForm" class="search-row"><input id="queryInput" type="search" placeholder="Ask anything or search the web..." aria-label="Search terms" autocomplete="off" required ><button class="btn" type="submit">Search ↗</button></form>
+      <p class="search-help" id="searchHelp">Type any word, question, sentence, or topic. Search anything opens Google results; Quick answers previews relevant Wikipedia articles here.</p>
+      <div id="resultsArea" class="results-area" aria-live="polite"></div>
+      <div class="search-footer"><button class="btn btn-quiet" id="backHome" type="button">← Back to welcome page</button><span>Search results come from Google or Wikipedia.</span></div>
+    </div>
+  </div></section>
+  </div>
 </main>
 <footer class="footer"><div class="container"><div class="footer-row"><a class="brand" href="#home"><span class="brand-icon">✦</span><span>Mini<em style="font-style:normal;background:linear-gradient(90deg,#62c8ff,#ff6fd8);-webkit-background-clip:text;background-clip:text;color:transparent">Find</em></span></a><div class="footer-links"><a href="#home">Home</a><a href="#search">Web & Search</a><a href="#discover">Discover</a><a href="#about">About</a><a href="#privacy">Privacy</a></div></div><div class="copyright">© 2026 MiniFind. Built for curious minds. · Search results are provided by external services.</div></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -70,16 +91,43 @@
   let toastTimer;
   const STORAGE_KEY = 'minifind_saved_v1';
   const messages = {
-    web: 'Search the wider web using DuckDuckGo.',
-    images: 'Find pictures through DuckDuckGo Images.',
-    videos: 'Find videos and tutorials through DuckDuckGo Videos.',
+    web: 'Search Google for any words, questions, sentences, or topics you type.',
     wiki: 'Search Wikipedia articles and preview summaries here.'
   };
   function toast(message) {
     const box = $('#toast'); box.textContent = message; box.classList.add('show');
     clearTimeout(toastTimer); toastTimer = setTimeout(() => box.classList.remove('show'), 2600);
   }
-  window.goToSearch = function () { document.querySelector('#search').scrollIntoView({behavior:'smooth'}); setTimeout(() => input.focus({preventScroll:true}), 350); };
+  const homeView = $('#homeView'), searchView = $('#searchView');
+  function showSearch() {
+    homeView.classList.add('hidden');
+    searchView.classList.remove('hidden');
+    history.replaceState(null, '', '#search');
+    $('#navLinks').classList.remove('open');
+    $('#menuBtn').setAttribute('aria-expanded', 'false');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    setTimeout(() => input.focus({preventScroll:true}), 260);
+  }
+  function showHome(target = 'home') {
+    searchView.classList.add('hidden');
+    homeView.classList.remove('hidden');
+    history.replaceState(null, '', '#' + target);
+    $('#navLinks').classList.remove('open');
+    $('#menuBtn').setAttribute('aria-expanded', 'false');
+    const section = document.getElementById(target) || $('#home');
+    setTimeout(() => section.scrollIntoView({behavior:'smooth', block:'start'}), 20);
+  }
+  window.goToSearch = showSearch;
+  $('#backHome').addEventListener('click', () => showHome('home'));
+  document.addEventListener('click', event => {
+    const anchor = event.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    const target = anchor.getAttribute('href').slice(1);
+    if (!document.getElementById(target)) return;
+    event.preventDefault();
+    if (target === 'search') showSearch(); else showHome(target);
+  });
+  if (location.hash === '#search') { homeView.classList.add('hidden'); searchView.classList.remove('hidden'); }
   function setType(type) {
     searchType = type;
     $$('.tab').forEach(button => {
@@ -87,7 +135,7 @@
       button.classList.toggle('active', active); button.setAttribute('aria-selected', String(active));
     });
     help.textContent = messages[type];
-    input.placeholder = type === 'wiki' ? 'Search a topic for a quick answer...' : type === 'images' ? 'What images do you want to find?' : type === 'videos' ? 'Find a video or tutorial...' : 'Ask anything or search the web...';
+    input.placeholder = type === 'wiki' ? 'Ask about a topic for a quick summary...' : 'Ask anything — type a word, question, or full sentence...';
     input.focus();
   }
   $$('.tab').forEach(button => button.addEventListener('click', () => setType(button.dataset.type)));
@@ -95,7 +143,7 @@
     const nav = $('#navLinks'); const open = nav.classList.toggle('open'); $('#menuBtn').setAttribute('aria-expanded', String(open));
   });
   $$('#navLinks a').forEach(link => link.addEventListener('click', () => { $('#navLinks').classList.remove('open'); $('#menuBtn').setAttribute('aria-expanded','false'); }));
-  $$('.topic-card').forEach(card => card.addEventListener('click', () => { input.value = card.dataset.topic; setType('wiki'); goToSearch(); $('#searchForm').requestSubmit(); }));
+  $$('.topic-card').forEach(card => card.addEventListener('click', () => { input.value = card.dataset.topic; setType('web'); goToSearch(); $('#searchForm').requestSubmit(); }));
   function escapeHTML(value) {
     return String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   }
@@ -127,334 +175,52 @@
     if (confirm('Clear all MiniFind saved links from this browser?')) { persistSaved([]); toast('Saved list cleared.'); }
   });
   function makeResultCard(item) {
-    const image = item.thumbnail ? `<img class="result-thumb" src="${escapeHTML(item.thumbnail)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
     const domain = (() => { try { return new URL(item.url).hostname.replace(/^www\./,''); } catch { return ''; } })();
     const card = document.createElement('article'); card.className = 'result-card';
-    card.innerHTML = `${image}<div class="result-body"><a class="result-title" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title)}</a><div class="result-desc">${escapeHTML(item.description || 'Open this result to learn more.')}</div><div class="result-domain">${escapeHTML(domain)}</div><div class="result-actions"><button class="mini-btn" type="button" data-save>🔖 Save</button><a class="mini-btn" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">Open result ↗</a></div></div>`;
+    card.innerHTML = `<div class="result-body"><a class="result-title" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title)}</a><div class="result-desc">${escapeHTML(item.description || 'Open this result to learn more.')}</div><div class="result-domain">${escapeHTML(domain)}</div><div class="result-actions"><button class="mini-btn" type="button" data-save>🔖 Save</button><a class="mini-btn" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">Open result ↗</a></div></div>`;
     card.querySelector('[data-save]').addEventListener('click', () => saveItem(item));
     return card;
   }
   function setStatus(message) { results.replaceChildren(); const div = document.createElement('div'); div.className='status'; div.textContent=message; results.append(div); }
   async function wikipediaSearch(query) {
     setStatus('Searching Wikipedia for “' + query + '”…');
-    const endpoint = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=' + encodeURIComponent(query) + '&gsrlimit=8&gsrnamespace=0&prop=extracts%7Cpageimages%7Cinfo&exintro=1&explaintext=1&exchars=550&piprop=thumbnail&pithumbsize=240&inprop=url';
+    const endpoint = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=' + encodeURIComponent(query) + '&gsrlimit=8&gsrnamespace=0&prop=extracts%7Cinfo&exintro=1&explaintext=1&exchars=550&inprop=url';
     try {
       const response = await fetch(endpoint, {headers:{'Accept':'application/json'}});
       if (!response.ok) throw new Error('Search service returned an error.');
       const data = await response.json();
       const pages = Object.values(data.query?.pages || {}).sort((a,b) => (a.index||0) - (b.index||0));
-      if (!pages.length) { setStatus('No Wikipedia articles found. Try a shorter or different search, or switch to Web.'); return; }
+      if (!pages.length) { setStatus('No Wikipedia articles found. Try a different wording or switch to Web search.'); return; }
       results.replaceChildren();
       pages.forEach(page => {
         const url = page.fullurl || ('https://en.wikipedia.org/?curid=' + page.pageid);
-        results.append(makeResultCard({title:page.title,url,description:page.extract || 'Open the Wikipedia article for more information.',thumbnail:page.thumbnail?.source || ''}));
+        results.append(makeResultCard({title:page.title,url,description:page.extract || 'Open the Wikipedia article for more information.'}));
       });
     } catch (error) {
       setStatus('MiniFind could not load Wikipedia results right now. Check your internet connection, then try again or use Web search.');
     }
   }
   $('#searchForm').addEventListener('submit', event => {
-    event.preventDefault(); const query = input.value.trim(); if (!query) { input.focus(); return; }
+    event.preventDefault();
+    const query = input.value.trim();
+    if (!query) { input.focus(); return; }
     if (searchType === 'wiki') { wikipediaSearch(query); return; }
-    let url;
-    if (searchType === 'images') url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query) + '&iax=images&ia=images';
-    else if (searchType === 'videos') url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query) + '&iax=videos&ia=videos';
-    else url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query);
-    setStatus('Opening ' + (searchType === 'images' ? 'image' : searchType === 'videos' ? 'video' : 'web') + ' results for “' + query + '” in a new tab…');
-    const tab = window.open(url, '_blank');
-    if (tab) { tab.opener = null; }
-    else { results.innerHTML = ''; const link = document.createElement('a'); link.href = url; link.target='_blank'; link.rel='noopener noreferrer'; link.className='btn'; link.textContent='Open search results ↗'; results.append(link); }
+    const url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+    results.replaceChildren();
+    const status = document.createElement('div'); status.className = 'status';
+    status.textContent = 'Your search is ready. MiniFind opens results from Google in a new tab.';
+    results.append(status);
+    const link = document.createElement('a'); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    link.className = 'btn'; link.textContent = 'Open Google results ↗'; link.style.justifySelf = 'start';
+    results.append(link);
+    const saveSearch = document.createElement('button'); saveSearch.type = 'button'; saveSearch.className = 'mini-btn'; saveSearch.textContent = '🔖 Save this search';
+    saveSearch.addEventListener('click', () => saveItem({title: query, url, description: 'Search link for: ' + query}));
+    results.append(saveSearch);
+    const tab = window.open(url, '_blank', 'noopener,noreferrer');
+    if (tab) { try { tab.opener = null; } catch (_) {} }
   });
   renderSaved();
 })();
 </script>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8fc">
-  <title>MiniFind — A tiny search project</title>
-  <style>
-    :root { color-scheme: light; --ink:#172033; --muted:#65708a; --line:#e4e8f2; --purple:#6558e8; --pale:#f1efff; --card:#ffffff; }
-    * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(ellipse at 50% 0%, #e9e7ff 0, #f7f8fc 42%, #f7f8fc 100%); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    .wrap { width:min(850px, calc(100% - 32px)); margin:0 auto; padding:25px 0 54px; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:-.04em; font-size:1.18rem; }
-    .mark { display:grid; place-items:center; width:35px; height:35px; border-radius:12px; color:white; background:var(--purple); box-shadow:0 6px 16px #6558e833; font-size:1.2rem; }
-    .tag { color:var(--muted); font-size:.84rem; }
-    main { padding-top:clamp(54px, 10vh, 105px); text-align:center; }
-    .eyebrow { display:inline-flex; align-items:center; gap:7px; padding:7px 11px; border:1px solid #dcd9ff; color:#5247c8; background:#ffffffaa; border-radius:99px; font-size:.78rem; font-weight:750; }
-    h1 { margin:20px 0 10px; font-size:clamp(2.6rem, 8vw, 4.6rem); letter-spacing:-.075em; line-height:1.02; }
-    h1 span { color:var(--purple); }
-    .sub { color:var(--muted); margin:0 auto; max-width:520px; line-height:1.65; font-size:1rem; }
-    form { display:flex; align-items:center; gap:10px; margin:30px auto 12px; padding:8px; width:min(650px,100%); background:white; border:1px solid var(--line); border-radius:18px; box-shadow:0 14px 45px #26345a0d; }
-    .glass { color:#818aa2; padding-left:10px; font-size:1.2rem; }
-    input { min-width:0; flex:1; border:0; outline:0; background:transparent; color:var(--ink); font:inherit; padding:12px 2px; }
-    input::placeholder { color:#929bb0; }
-    button { border:0; border-radius:12px; background:var(--purple); color:#fff; font:inherit; font-weight:700; padding:12px 17px; cursor:pointer; transition:transform .15s,opacity .15s; }
-    button:hover { opacity:.92; transform:translateY(-1px); }
-    button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #a9a3ff; outline-offset:3px; }
-    .web-btn { background:#f0efff; color:#5146c3; white-space:nowrap; }
-    .hint { color:var(--muted); font-size:.82rem; }
-    .examples { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; margin:18px auto 0; }
-    .examples button { background:#fff; color:#59627a; font-size:.82rem; font-weight:600; padding:8px 12px; border:1px solid var(--line); border-radius:999px; }
-    #status { margin:28px 0 12px; color:var(--muted); text-align:left; font-size:.9rem; }
-    #results { display:grid; gap:12px; text-align:left; }
-    .result { padding:18px 20px; background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:0 5px 18px #27345b06; }
-    .result a { color:#5146c3; font-size:1.08rem; font-weight:750; text-decoration:none; }
-    .result a:hover { text-decoration:underline; }
-    .result p { margin:8px 0 0; color:#535e76; line-height:1.6; font-size:.92rem; }
-    .note { margin-top:35px; padding:17px 19px; border:1px solid #e5e4fb; background:#ffffff99; border-radius:16px; text-align:left; color:#636d84; font-size:.85rem; line-height:1.65; }
-    .note strong { color:#303951; }
-    footer { margin-top:26px; text-align:center; color:#8992a6; font-size:.78rem; }
-    @media (max-width:540px) { header { align-items:flex-start; } .tag { max-width:130px; text-align:right; } form { flex-wrap:wrap; gap:5px; } input { flex-basis:calc(100% - 45px); } .web-btn { flex:1; } form > button[type="submit"] { flex:1; } }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand"><span class="mark" aria-hidden="true">⌕</span> MiniFind</div>
-      <div class="tag">A beginner's search engine project</div>
-    </header>
-    <main>
-      <div class="eyebrow"><span aria-hidden="true">✦</span> Small project. Big possibilities.</div>
-      <h1>Find something<br><span>interesting.</span></h1>
-      <p class="sub">A tiny search website made with HTML, CSS and JavaScript. Explore encyclopedia results here, or search the wider web using DuckDuckGo.</p>
-      <form id="searchForm" role="search">
-        <span class="glass" aria-hidden="true">⌕</span>
-        <input id="query" name="q" type="search" placeholder="Try space, coding, or dinosaurs…" aria-label="Search Wikipedia" autocomplete="off" required>
-        <button type="submit">Search here</button>
-        <button class="web-btn" id="webSearch" type="button">Search the web ↗</button>
-      </form>
-      <div class="hint">Search encyclopedia articles below, or use the web-search button.</div>
-      <div class="examples" aria-label="Example searches">
-        <button type="button" data-query="space exploration">Space</button>
-        <button type="button" data-query="computer programming">Coding</button>
-        <button type="button" data-query="dinosaurs">Dinosaurs</button>
-        <button type="button" data-query="solar system">Solar system</button>
-      </div>
-    </main>
-    <div id="status" role="status" aria-live="polite"></div>
-    <section id="results" aria-label="Search results"></section>
-    <aside class="note"><strong>How this works:</strong> MiniFind is your own original website design. Its encyclopedia search uses the free Wikipedia search API; the “Search the web” button sends your query to DuckDuckGo. This is a learning project, not a Google-scale search engine with its own index.</aside>
-    <footer>Built as a learning project · No account or payment needed to try it locally</footer>
-  </div>
-  <script>
-    const form = document.getElementById('searchForm');
-    const input = document.getElementById('query');
-    const results = document.getElementById('results');
-    const status = document.getElementById('status');
-    const webButton = document.getElementById('webSearch');
-
-    function searchTheWeb() {
-      const query = input.value.trim();
-      if (!query) { input.focus(); status.textContent = 'Type something to search first.'; return; }
-      const url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query);
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-
-    function safeTextFromSnippet(html) {
-      const parsed = new DOMParser().parseFromString(html || '', 'text/html');
-      return parsed.body.textContent || '';
-    }
-
-    function showResult(item) {
-      const article = document.createElement('article');
-      article.className = 'result';
-      const link = document.createElement('a');
-      link.href = 'https://en.wikipedia.org/?curid=' + encodeURIComponent(item.pageid);
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.textContent = item.title;
-      const summary = document.createElement('p');
-      summary.textContent = safeTextFromSnippet(item.snippet) || 'Open this article to read more.';
-      article.append(link, summary);
-      results.appendChild(article);
-    }
-
-    async function searchWikipedia(query) {
-      status.textContent = 'Searching Wikipedia…';
-      results.replaceChildren();
-      const params = new URLSearchParams({
-        action: 'query', list: 'search', srsearch: query,
-        srlimit: '8', format: 'json', origin: '*'
-      });
-      try {
-        const response = await fetch('https://en.wikipedia.org/w/api.php?' + params.toString());
-        if (!response.ok) throw new Error('The search service returned an error.');
-        const data = await response.json();
-        const items = data && data.query && data.query.search;
-        if (!Array.isArray(items) || items.length === 0) {
-          status.textContent = 'No results found. Try different words.';
-          return;
-        }
-        status.textContent = `Found ${data.query.searchinfo.totalhits.toLocaleString()} matching pages. Showing up to ${items.length}.`;
-        items.forEach(showResult);
-      } catch (error) {
-        status.textContent = 'Sorry, the search could not load. Check your internet connection and try again.';
-      }
-    }
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const query = input.value.trim();
-      if (query) searchWikipedia(query);
-    });
-    webButton.addEventListener('click', searchTheWeb);
-    document.querySelectorAll('[data-query]').forEach((button) => {
-      button.addEventListener('click', () => {
-        input.value = button.dataset.query;
-        searchWikipedia(input.value);
-      });
-    });
-  </script>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8fc">
-  <title>MiniFind — A tiny search project</title>
-  <style>
-    :root { color-scheme: light; --ink:#172033; --muted:#65708a; --line:#e4e8f2; --purple:#6558e8; --pale:#f1efff; --card:#ffffff; }
-    * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(ellipse at 50% 0%, #e9e7ff 0, #f7f8fc 42%, #f7f8fc 100%); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    .wrap { width:min(850px, calc(100% - 32px)); margin:0 auto; padding:25px 0 54px; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:-.04em; font-size:1.18rem; }
-    .mark { display:grid; place-items:center; width:35px; height:35px; border-radius:12px; color:white; background:var(--purple); box-shadow:0 6px 16px #6558e833; font-size:1.2rem; }
-    .tag { color:var(--muted); font-size:.84rem; }
-    main { padding-top:clamp(54px, 10vh, 105px); text-align:center; }
-    .eyebrow { display:inline-flex; align-items:center; gap:7px; padding:7px 11px; border:1px solid #dcd9ff; color:#5247c8; background:#ffffffaa; border-radius:99px; font-size:.78rem; font-weight:750; }
-    h1 { margin:20px 0 10px; font-size:clamp(2.6rem, 8vw, 4.6rem); letter-spacing:-.075em; line-height:1.02; }
-    h1 span { color:var(--purple); }
-    .sub { color:var(--muted); margin:0 auto; max-width:520px; line-height:1.65; font-size:1rem; }
-    form { display:flex; align-items:center; gap:10px; margin:30px auto 12px; padding:8px; width:min(650px,100%); background:white; border:1px solid var(--line); border-radius:18px; box-shadow:0 14px 45px #26345a0d; }
-    .glass { color:#818aa2; padding-left:10px; font-size:1.2rem; }
-    input { min-width:0; flex:1; border:0; outline:0; background:transparent; color:var(--ink); font:inherit; padding:12px 2px; }
-    input::placeholder { color:#929bb0; }
-    button { border:0; border-radius:12px; background:var(--purple); color:#fff; font:inherit; font-weight:700; padding:12px 17px; cursor:pointer; transition:transform .15s,opacity .15s; }
-    button:hover { opacity:.92; transform:translateY(-1px); }
-    button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #a9a3ff; outline-offset:3px; }
-    .web-btn { background:#f0efff; color:#5146c3; white-space:nowrap; }
-    .hint { color:var(--muted); font-size:.82rem; }
-    .examples { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; margin:18px auto 0; }
-    .examples button { background:#fff; color:#59627a; font-size:.82rem; font-weight:600; padding:8px 12px; border:1px solid var(--line); border-radius:999px; }
-    #status { margin:28px 0 12px; color:var(--muted); text-align:left; font-size:.9rem; }
-    #results { display:grid; gap:12px; text-align:left; }
-    .result { padding:18px 20px; background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:0 5px 18px #27345b06; }
-    .result a { color:#5146c3; font-size:1.08rem; font-weight:750; text-decoration:none; }
-    .result a:hover { text-decoration:underline; }
-    .result p { margin:8px 0 0; color:#535e76; line-height:1.6; font-size:.92rem; }
-    .note { margin-top:35px; padding:17px 19px; border:1px solid #e5e4fb; background:#ffffff99; border-radius:16px; text-align:left; color:#636d84; font-size:.85rem; line-height:1.65; }
-    .note strong { color:#303951; }
-    footer { margin-top:26px; text-align:center; color:#8992a6; font-size:.78rem; }
-    @media (max-width:540px) { header { align-items:flex-start; } .tag { max-width:130px; text-align:right; } form { flex-wrap:wrap; gap:5px; } input { flex-basis:calc(100% - 45px); } .web-btn { flex:1; } form > button[type="submit"] { flex:1; } }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand"><span class="mark" aria-hidden="true">⌕</span> MiniFind</div>
-      <div class="tag">A beginner's search engine project</div>
-    </header>
-    <main>
-      <div class="eyebrow"><span aria-hidden="true">✦</span> Small project. Big possibilities.</div>
-      <h1>Find something<br><span>interesting.</span></h1>
-      <p class="sub">A tiny search website made with HTML, CSS and JavaScript. Explore encyclopedia results here, or search the wider web using DuckDuckGo.</p>
-      <form id="searchForm" role="search">
-        <span class="glass" aria-hidden="true">⌕</span>
-        <input id="query" name="q" type="search" placeholder="Try space, coding, or dinosaurs…" aria-label="Search Wikipedia" autocomplete="off" required>
-        <button type="submit">Search here</button>
-        <button class="web-btn" id="webSearch" type="button">Search the web ↗</button>
-      </form>
-      <div class="hint">Search encyclopedia articles below, or use the web-search button.</div>
-      <div class="examples" aria-label="Example searches">
-        <button type="button" data-query="space exploration">Space</button>
-        <button type="button" data-query="computer programming">Coding</button>
-        <button type="button" data-query="dinosaurs">Dinosaurs</button>
-        <button type="button" data-query="solar system">Solar system</button>
-      </div>
-    </main>
-    <div id="status" role="status" aria-live="polite"></div>
-    <section id="results" aria-label="Search results"></section>
-    <aside class="note"><strong>How this works:</strong> MiniFind is your own original website design. Its encyclopedia search uses the free Wikipedia search API; the “Search the web” button sends your query to DuckDuckGo. This is a learning project, not a Google-scale search engine with its own index.</aside>
-    <footer>Built as a learning project · No account or payment needed to try it locally</footer>
-  </div>
-  <script>
-    const form = document.getElementById('searchForm');
-    const input = document.getElementById('query');
-    const results = document.getElementById('results');
-    const status = document.getElementById('status');
-    const webButton = document.getElementById('webSearch');
-
-    function searchTheWeb() {
-      const query = input.value.trim();
-      if (!query) { input.focus(); status.textContent = 'Type something to search first.'; return; }
-      const url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query);
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-
-    function safeTextFromSnippet(html) {
-      const parsed = new DOMParser().parseFromString(html || '', 'text/html');
-      return parsed.body.textContent || '';
-    }
-
-    function showResult(item) {
-      const article = document.createElement('article');
-      article.className = 'result';
-      const link = document.createElement('a');
-      link.href = 'https://en.wikipedia.org/?curid=' + encodeURIComponent(item.pageid);
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.textContent = item.title;
-      const summary = document.createElement('p');
-      summary.textContent = safeTextFromSnippet(item.snippet) || 'Open this article to read more.';
-      article.append(link, summary);
-      results.appendChild(article);
-    }
-
-    async function searchWikipedia(query) {
-      status.textContent = 'Searching Wikipedia…';
-      results.replaceChildren();
-      const params = new URLSearchParams({
-        action: 'query', list: 'search', srsearch: query,
-        srlimit: '8', format: 'json', origin: '*'
-      });
-      try {
-        const response = await fetch('https://en.wikipedia.org/w/api.php?' + params.toString());
-        if (!response.ok) throw new Error('The search service returned an error.');
-        const data = await response.json();
-        const items = data && data.query && data.query.search;
-        if (!Array.isArray(items) || items.length === 0) {
-          status.textContent = 'No results found. Try different words.';
-          return;
-        }
-        status.textContent = `Found ${data.query.searchinfo.totalhits.toLocaleString()} matching pages. Showing up to ${items.length}.`;
-        items.forEach(showResult);
-      } catch (error) {
-        status.textContent = 'Sorry, the search could not load. Check your internet connection and try again.';
-      }
-    }
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const query = input.value.trim();
-      if (query) searchWikipedia(query);
-    });
-    webButton.addEventListener('click', searchTheWeb);
-    document.querySelectorAll('[data-query]').forEach((button) => {
-      button.addEventListener('click', () => {
-        input.value = button.dataset.query;
-        searchWikipedia(input.value);
-      });
-    });
-  </script>
 </body>
 </html>
