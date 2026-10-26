@@ -3,6 +3,178 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b25">
+  <meta name="description" content="MiniFind — one search, infinite discoveries. Explore websites, images, videos, science, technology and more.">
+  <title>MiniFind — One Search. Infinite Discoveries.</title>
+  <style>
+    :root{--bg:#0b0820;--panel:rgba(24,18,52,.74);--panel2:rgba(20,24,57,.78);--line:rgba(255,255,255,.12);--text:#f7f4ff;--muted:#bcb6d8;--pink:#ff6fd8;--purple:#a78bfa;--blue:#62c8ff;--mint:#7ef5d4;--shadow:0 22px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 12% 0%,rgba(125,71,255,.28),transparent 35%),radial-gradient(ellipse at 90% 12%,rgba(255,80,204,.18),transparent 30%),radial-gradient(ellipse at 60% 70%,rgba(48,120,255,.15),transparent 35%),var(--bg);min-height:100vh;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}.container{width:min(1120px,calc(100% - 36px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(11,8,32,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:1.22rem;letter-spacing:-.04em}.brand-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--pink));box-shadow:0 0 28px rgba(167,139,250,.35);font-size:21px}.brand span em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.nav-links{display:flex;align-items:center;gap:24px;color:#d6d0ec;font-size:.9rem}.nav-links a:hover{color:white}.nav-actions{display:flex;align-items:center;gap:9px}.btn{border:0;border-radius:999px;padding:13px 20px;font-weight:750;color:white;background:linear-gradient(110deg,#8661ff,#d75ce5 55%,#ed6db4);box-shadow:0 10px 28px rgba(164,94,241,.24);transition:transform .18s,filter .18s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn:focus-visible,.tab:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}.btn-quiet{border:1px solid var(--line);background:rgba(255,255,255,.05);box-shadow:none}.menu-btn{display:none;border:1px solid var(--line);color:white;background:rgba(255,255,255,.07);padding:9px 12px;border-radius:12px}
+    .hero{position:relative;padding:88px 0 62px;text-align:center;isolation:isolate}.orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);pointer-events:none}.orb.one{width:260px;height:260px;left:0;top:50px;background:radial-gradient(circle,rgba(133,89,255,.19),transparent 68%)}.orb.two{width:300px;height:300px;right:0;top:0;background:radial-gradient(circle,rgba(255,91,210,.14),transparent 68%)}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(185,154,255,.25);border-radius:100px;background:rgba(124,80,255,.1);color:#ded5ff;font-size:.83rem;font-weight:650}.pulse{width:7px;height:7px;background:#89ffe1;border-radius:50%;box-shadow:0 0 14px #89ffe1}.hero h1{max-width:900px;margin:23px auto 16px;font-size:clamp(2.65rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.065em}.gradient-text{background:linear-gradient(96deg,#b7a0ff 10%,#7bd7ff 48%,#ff91d7 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:660px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,2.1vw,1.16rem);line-height:1.8}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px 0 19px}.small-note{font-size:.83rem;color:#958db8}
+    .preview-wrap{max-width:800px;margin:38px auto 0;perspective:900px}.preview{position:relative;padding:17px;border:1px solid rgba(255,255,255,.16);border-radius:25px;background:linear-gradient(140deg,rgba(45,32,83,.85),rgba(15,24,56,.82));box-shadow:var(--shadow),0 0 75px rgba(111,87,255,.1);transform:rotateX(1deg)}.preview-bar{display:flex;align-items:center;gap:7px;text-align:left;padding:3px 4px 15px;color:#aca4cd;font-size:.76rem}.dot{width:8px;height:8px;border-radius:50%;background:#ff7bae}.dot:nth-child(2){background:#ffd166}.dot:nth-child(3){background:#7ef5d4}.preview-label{margin-left:auto}.preview-content{border-radius:17px;background:rgba(7,10,30,.55);padding:24px;text-align:left}.preview-mini-title{font-size:1.15rem;font-weight:750;margin-bottom:7px}.preview-sub{color:var(--muted);font-size:.88rem;margin-bottom:18px}.preview-search{display:flex;align-items:center;gap:10px;border:1px solid rgba(181,158,255,.38);background:rgba(255,255,255,.045);padding:13px 15px;border-radius:14px;color:#d0cae8}.preview-pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.preview-pills span{font-size:.75rem;padding:7px 10px;border:1px solid var(--line);border-radius:100px;color:#d9d2f1;background:rgba(255,255,255,.04)}
+    section{padding:70px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 30px}.kicker{color:#b6a3ff;font-weight:750;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem}.section-head h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.045em;margin:10px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}.search-panel{padding:23px;border:1px solid rgba(255,255,255,.14);border-radius:26px;background:linear-gradient(140deg,rgba(29,22,64,.86),rgba(15,23,52,.84));box-shadow:var(--shadow)}.search-types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:17px}.tab{border:1px solid transparent;border-radius:100px;padding:10px 15px;background:rgba(255,255,255,.045);color:#c8c0e6;font-weight:650}.tab.active{background:linear-gradient(100deg,rgba(139,102,255,.27),rgba(239,93,202,.16));border-color:rgba(194,156,255,.42);color:white}.search-row{display:flex;gap:10px}.search-row input{min-width:0;flex:1;border:1px solid rgba(193,174,255,.24);border-radius:15px;padding:16px 17px;background:rgba(5,7,24,.55);color:white;outline:none}.search-row input::placeholder{color:#8d86ad}.search-help{font-size:.82rem;color:#a9a2c8;margin:12px 3px 0}.results-area{margin-top:20px;display:grid;gap:12px}.result-card{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:17px;padding:15px;background:rgba(255,255,255,.035)}.result-card:hover{border-color:rgba(173,144,255,.4)}.result-thumb{width:76px;height:76px;object-fit:cover;border-radius:12px;background:rgba(255,255,255,.06);flex-shrink:0}.result-body{min-width:0;flex:1}.result-title{font-weight:750;color:#ece6ff;line-height:1.45}.result-title:hover{color:var(--blue)}.result-desc{color:#aaa3c9;font-size:.88rem;line-height:1.65;margin-top:5px}.result-domain{font-size:.76rem;color:#8bdbd6;margin-top:7px}.result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.mini-btn{border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.05);color:#e7e1fa;padding:7px 10px;font-size:.78rem;font-weight:700}.mini-btn.saved{color:#98ffdc;border-color:rgba(126,245,212,.38)}.status{padding:16px;border:1px dashed rgba(255,255,255,.18);border-radius:14px;color:#bdb5da;line-height:1.6}.hidden{display:none!important}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.topic-card{position:relative;overflow:hidden;min-height:190px;text-align:left;border:1px solid var(--line);border-radius:21px;padding:21px;background:linear-gradient(150deg,rgba(36,26,75,.82),rgba(17,24,54,.78));color:white;transition:transform .2s,border-color .2s}.topic-card:hover{transform:translateY(-5px);border-color:rgba(179,148,255,.48)}.topic-card:before{content:"";position:absolute;width:125px;height:125px;right:-44px;top:-45px;border-radius:50%;background:var(--glow,rgba(168,139,250,.2));filter:blur(20px)}.topic-icon{font-size:1.8rem;display:inline-grid;place-items:center;width:49px;height:49px;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.06);margin-bottom:18px}.topic-card h3{margin:0 0 7px;font-size:1rem}.topic-card p{margin:0;color:#b8b1d3;font-size:.83rem;line-height:1.55}.topic-arrow{position:absolute;right:17px;bottom:17px;color:#c5b4ff}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.feature{padding:23px;border:1px solid var(--line);border-radius:19px;background:rgba(255,255,255,.035)}.feature-icon{font-size:1.5rem}.feature h3{margin:13px 0 8px;font-size:1.03rem}.feature p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.7}.saved-layout{display:grid;grid-template-columns:1fr .8fr;gap:20px;align-items:start}.saved-box,.email-box{border:1px solid var(--line);border-radius:22px;padding:23px;background:linear-gradient(145deg,rgba(30,24,65,.8),rgba(15,22,49,.72))}.saved-box h3,.email-box h3{margin:0 0 8px;font-size:1.3rem}.saved-box>p,.email-box>p{margin:0 0 17px;color:var(--muted);font-size:.9rem;line-height:1.6}.saved-list{display:grid;gap:10px}.saved-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:11px}.saved-item a{flex:1;min-width:0;overflow-wrap:anywhere;font-size:.87rem;color:#d9d3f5}.empty{padding:17px;color:#a9a2c8;background:rgba(255,255,255,.025);border-radius:12px;font-size:.88rem;line-height:1.6}.local-note{font-size:.78rem!important;color:#9d96bc!important;margin-top:15px!important}.email-tag{display:inline-flex;border:1px solid rgba(126,245,212,.27);background:rgba(126,245,212,.08);color:#9bffe0;border-radius:100px;padding:7px 10px;font-weight:750;font-size:.75rem;margin-bottom:14px}.email-box ul{padding-left:19px;color:#c7c0e4;font-size:.88rem;line-height:1.8}.email-box .btn{margin-top:5px}.footer{border-top:1px solid rgba(255,255,255,.09);padding:30px 0 35px;color:#aaa2c7}.footer-row{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}.footer-brand{font-weight:800;color:white}.footer-links{display:flex;gap:16px;flex-wrap:wrap;font-size:.86rem}.footer-links a:hover{color:white}.copyright{font-size:.8rem;margin-top:18px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);padding:12px 17px;background:#f7f4ff;color:#20153d;border-radius:12px;font-weight:750;font-size:.85rem;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .2s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:850px){.nav-links{gap:14px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.saved-layout{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:650px){.container{width:min(100% - 26px,1120px)}.nav{height:67px}.nav-links{display:none;position:absolute;top:67px;left:0;right:0;padding:17px;background:rgba(13,9,36,.97);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:8px 5px}.menu-btn{display:inline-block}.nav-actions .btn{display:none}.hero{padding:65px 0 43px}.hero h1{font-size:clamp(2.6rem,13vw,4.4rem)}.preview-content{padding:17px}.preview{padding:11px}.hero-actions .btn{width:100%}section{padding:53px 0}.search-panel{padding:14px}.search-row{flex-direction:column}.search-row .btn{width:100%}.result-card{gap:10px;padding:12px}.result-thumb{width:58px;height:58px}.grid{gap:10px}.topic-card{padding:16px;min-height:185px}.feature-grid{grid-template-columns:1fr}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+  <a class="brand" href="#home" aria-label="MiniFind home"><span class="brand-icon">✦</span><span>Mini<em>Find</em></span></a>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="#home">Home</a><a href="#search">Search</a><a href="#discover">Discover</a><a href="#saved">Saved</a><a href="#about">About</a><a href="#privacy">Privacy</a></nav>
+  <div class="nav-actions"><button class="btn" onclick="goToSearch()">Get Started ↗</button><button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button></div>
+</div></header>
+<main>
+  <section class="hero" id="home"><div class="orb one"></div><div class="orb two"></div><div class="container">
+    <div class="eyebrow"><span class="pulse"></span> YOUR CURIOSITY, UNLOCKED</div>
+    <h1>One Search.<br><span class="gradient-text">Infinite Discoveries.</span></h1>
+    <p>Find answers, explore amazing images, watch interesting videos, and discover useful corners of the internet — all starting from one place.</p>
+    <div class="hero-actions"><button class="btn" onclick="goToSearch()">Get Started for Free <span aria-hidden="true">→</span></button><a class="btn btn-quiet" href="#discover">✧ Explore topics</a></div>
+    <div class="small-note">No account needed to start exploring.</div>
+    <div class="preview-wrap" aria-label="MiniFind search preview"><div class="preview"><div class="preview-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="preview-label">minifind • search workspace</span></div><div class="preview-content"><div class="preview-mini-title">What sparks your curiosity?</div><div class="preview-sub">A world of ideas is one question away.</div><div class="preview-search"><span>⌕</span><span>Try “how do black holes work?”</span><span style="margin-left:auto;color:#d8b9ff">↵</span></div><div class="preview-pills"><span>🌐 Web</span><span>🖼️ Images</span><span>🎬 Videos</span><span>✨ Discover</span></div></div></div></div>
+  </div></section>
+  <section id="search"><div class="container"><div class="section-head"><div class="kicker">Your search starts here</div><h2>What are you looking for today?</h2><p>Choose a search type, enter a topic, and MiniFind will help you explore. Web, image and video searches open results from external search providers.</p></div>
+    <div class="search-panel"><div class="search-types" role="tablist" aria-label="Search type"><button class="tab active" data-type="web" role="tab" aria-selected="true">🌐 Web</button><button class="tab" data-type="images" role="tab" aria-selected="false">🖼️ Images</button><button class="tab" data-type="videos" role="tab" aria-selected="false">🎬 Videos</button><button class="tab" data-type="wiki" role="tab" aria-selected="false">📚 Quick answers</button></div>
+      <form id="searchForm" class="search-row"><input id="queryInput" type="search" placeholder="Ask anything or search the web..." aria-label="Search terms" autocomplete="off" required maxlength="180"><button class="btn" type="submit">Search ↗</button></form>
+      <p class="search-help" id="searchHelp">Search the wider web using DuckDuckGo, or switch to Quick answers to find Wikipedia article summaries.</p>
+      <div id="resultsArea" class="results-area" aria-live="polite"></div>
+    </div>
+  </div></section>
+  <section id="discover"><div class="container"><div class="section-head"><div class="kicker">A little inspiration</div><h2>Explore Something New</h2><p>Your next discovery might be a planet, a clever invention, an amazing place, or a creative idea.</p></div>
+    <div class="grid">
+      <button class="topic-card" style="--glow:rgba(113,114,255,.3)" data-topic="science space astronomy planets"><span class="topic-icon">🚀</span><h3>Science & Space</h3><p>Explore planets, the universe and fascinating scientific questions.</p><span class="topic-arrow">↗</span></button>
+      <button class="topic-card" style="--glow:rgba(76,205,255,.3)" data-topic="technology coding useful gadgets"><span class="topic-icon">💻</span><h3>Technology</h3><p>Discover coding tutorials, gadgets and digital ideas.</p><span class="topic-arrow">↗</span></button>
+      <button class="topic-card" style="--glow:rgba(64,231,181,.23)" data-topic="animals geography cultures history nature"><span class="topic-icon">🌍</span><h3>Our World</h3><p>Learn about animals, cultures, history and places around Earth.</p><span class="topic-arrow">↗</span></button>
+      <button class="topic-card" style="--glow:rgba(255,108,214,.25)" data-topic="creative projects art design photography"><span class="topic-icon">🎨</span><h3>Creativity</h3><p>Find inspiration for art, photography, design and projects.</p><span class="topic-arrow">↗</span></button>
+    </div>
+  </div></section>
+  <section id="about"><div class="container"><div class="section-head"><div class="kicker">Made for curious minds</div><h2>Why MiniFind?</h2><p>A simple starting point for exploring online, built to work on phones, tablets and computers.</p></div>
+    <div class="feature-grid"><article class="feature"><div class="feature-icon">🧭</div><h3>One Place to Explore</h3><p>Jump from one search box to websites, images, videos and topic ideas.</p></article><article class="feature"><div class="feature-icon">⚡</div><h3>Fast and Smooth</h3><p>A lightweight website with no account required to search.</p></article><article class="feature"><div class="feature-icon">🔖</div><h3>Keep Useful Finds</h3><p>Save search results in this browser and return to them later on the same device.</p></article></div>
+  </div></section>
+  <section id="saved"><div class="container"><div class="section-head"><div class="kicker">Your personal collection</div><h2>Save it for later</h2><p>Keep handy links for studying, projects, or just exploring. Your saved list stays in this browser on this device.</p></div>
+    <div class="saved-layout"><div class="saved-box"><h3>🔖 Your saved discoveries</h3><p>Save results from Quick answers to build a little collection.</p><div id="savedList" class="saved-list"><div class="empty">Nothing saved yet. Search for a topic, then select “Save” on a result.</div></div><p class="local-note">Note: this list is stored locally in your browser. It does not sync between devices and may be lost if you clear browser data.</p><button class="mini-btn" id="clearSaved" type="button">Clear saved list</button></div>
+      <aside class="email-box"><span class="email-tag">COMING NEXT</span><h3>📩 Email your study pack</h3><p>We can add a feature for people to receive saved notes or answers by email after MiniFind is connected to a secure form/email service.</p><ul><li>Email delivery isn't active in this version.</li><li>This page does not collect or transmit email addresses.</li><li>Never put private API keys or passwords in this website's code.</li></ul><a class="btn btn-quiet" href="#privacy">Read privacy notes</a></aside></div>
+  </div></section>
+  <section id="privacy"><div class="container"><div class="section-head"><div class="kicker">Privacy in plain English</div><h2>Your searches, your choice.</h2><p>MiniFind does not ask you to create an account. When you use Web, Images or Videos, your search terms are sent to the selected external search provider. Quick answers uses Wikipedia's public search API. Saved links are kept in local browser storage on your device. MiniFind does not currently collect email addresses.</p></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-row"><a class="brand" href="#home"><span class="brand-icon">✦</span><span>Mini<em style="font-style:normal;background:linear-gradient(90deg,#62c8ff,#ff6fd8);-webkit-background-clip:text;background-clip:text;color:transparent">Find</em></span></a><div class="footer-links"><a href="#home">Home</a><a href="#search">Web & Search</a><a href="#discover">Discover</a><a href="#about">About</a><a href="#privacy">Privacy</a></div></div><div class="copyright">© 2026 MiniFind. Built for curious minds. · Search results are provided by external services.</div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  'use strict';
+  const $ = (selector) => document.querySelector(selector);
+  const $$ = (selector) => [...document.querySelectorAll(selector)];
+  const input = $('#queryInput'), results = $('#resultsArea'), help = $('#searchHelp');
+  let searchType = 'web';
+  let toastTimer;
+  const STORAGE_KEY = 'minifind_saved_v1';
+  const messages = {
+    web: 'Search the wider web using DuckDuckGo.',
+    images: 'Find pictures through DuckDuckGo Images.',
+    videos: 'Find videos and tutorials through DuckDuckGo Videos.',
+    wiki: 'Search Wikipedia articles and preview summaries here.'
+  };
+  function toast(message) {
+    const box = $('#toast'); box.textContent = message; box.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => box.classList.remove('show'), 2600);
+  }
+  window.goToSearch = function () { document.querySelector('#search').scrollIntoView({behavior:'smooth'}); setTimeout(() => input.focus({preventScroll:true}), 350); };
+  function setType(type) {
+    searchType = type;
+    $$('.tab').forEach(button => {
+      const active = button.dataset.type === type;
+      button.classList.toggle('active', active); button.setAttribute('aria-selected', String(active));
+    });
+    help.textContent = messages[type];
+    input.placeholder = type === 'wiki' ? 'Search a topic for a quick answer...' : type === 'images' ? 'What images do you want to find?' : type === 'videos' ? 'Find a video or tutorial...' : 'Ask anything or search the web...';
+    input.focus();
+  }
+  $$('.tab').forEach(button => button.addEventListener('click', () => setType(button.dataset.type)));
+  $('#menuBtn').addEventListener('click', () => {
+    const nav = $('#navLinks'); const open = nav.classList.toggle('open'); $('#menuBtn').setAttribute('aria-expanded', String(open));
+  });
+  $$('#navLinks a').forEach(link => link.addEventListener('click', () => { $('#navLinks').classList.remove('open'); $('#menuBtn').setAttribute('aria-expanded','false'); }));
+  $$('.topic-card').forEach(card => card.addEventListener('click', () => { input.value = card.dataset.topic; setType('wiki'); goToSearch(); $('#searchForm').requestSubmit(); }));
+  function escapeHTML(value) {
+    return String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  }
+  function loadSaved() {
+    try { const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); return Array.isArray(parsed) ? parsed.filter(item => item && typeof item.title === 'string' && typeof item.url === 'string') : []; }
+    catch { return []; }
+  }
+  function persistSaved(items) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(items)); renderSaved(); return true; }
+    catch { toast('Browser storage is unavailable.'); return false; }
+  }
+  function renderSaved() {
+    const list = $('#savedList'), items = loadSaved();
+    if (!items.length) { list.innerHTML = '<div class="empty">Nothing saved yet. Search for a topic, then select “Save” on a result.</div>'; return; }
+    list.innerHTML = items.map((item, index) => `<div class="saved-item"><a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title)}</a><button class="mini-btn" type="button" data-remove="${index}" aria-label="Remove ${escapeHTML(item.title)}">Remove</button></div>`).join('');
+  }
+  function saveItem(item) {
+    const items = loadSaved();
+    if (items.some(existing => existing.url === item.url)) { toast('Already in your saved list.'); return; }
+    items.unshift({title:item.title,url:item.url,description:item.description || '',savedAt:Date.now()});
+    if (persistSaved(items.slice(0,100))) toast('Saved in this browser ✓');
+  }
+  $('#savedList').addEventListener('click', event => {
+    const button = event.target.closest('[data-remove]'); if (!button) return;
+    const items = loadSaved(); items.splice(Number(button.dataset.remove),1); persistSaved(items); toast('Removed from saved list.');
+  });
+  $('#clearSaved').addEventListener('click', () => {
+    if (!loadSaved().length) { toast('Your saved list is already empty.'); return; }
+    if (confirm('Clear all MiniFind saved links from this browser?')) { persistSaved([]); toast('Saved list cleared.'); }
+  });
+  function makeResultCard(item) {
+    const image = item.thumbnail ? `<img class="result-thumb" src="${escapeHTML(item.thumbnail)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
+    const domain = (() => { try { return new URL(item.url).hostname.replace(/^www\./,''); } catch { return ''; } })();
+    const card = document.createElement('article'); card.className = 'result-card';
+    card.innerHTML = `${image}<div class="result-body"><a class="result-title" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title)}</a><div class="result-desc">${escapeHTML(item.description || 'Open this result to learn more.')}</div><div class="result-domain">${escapeHTML(domain)}</div><div class="result-actions"><button class="mini-btn" type="button" data-save>🔖 Save</button><a class="mini-btn" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">Open result ↗</a></div></div>`;
+    card.querySelector('[data-save]').addEventListener('click', () => saveItem(item));
+    return card;
+  }
+  function setStatus(message) { results.replaceChildren(); const div = document.createElement('div'); div.className='status'; div.textContent=message; results.append(div); }
+  async function wikipediaSearch(query) {
+    setStatus('Searching Wikipedia for “' + query + '”…');
+    const endpoint = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=' + encodeURIComponent(query) + '&gsrlimit=8&gsrnamespace=0&prop=extracts%7Cpageimages%7Cinfo&exintro=1&explaintext=1&exchars=550&piprop=thumbnail&pithumbsize=240&inprop=url';
+    try {
+      const response = await fetch(endpoint, {headers:{'Accept':'application/json'}});
+      if (!response.ok) throw new Error('Search service returned an error.');
+      const data = await response.json();
+      const pages = Object.values(data.query?.pages || {}).sort((a,b) => (a.index||0) - (b.index||0));
+      if (!pages.length) { setStatus('No Wikipedia articles found. Try a shorter or different search, or switch to Web.'); return; }
+      results.replaceChildren();
+      pages.forEach(page => {
+        const url = page.fullurl || ('https://en.wikipedia.org/?curid=' + page.pageid);
+        results.append(makeResultCard({title:page.title,url,description:page.extract || 'Open the Wikipedia article for more information.',thumbnail:page.thumbnail?.source || ''}));
+      });
+    } catch (error) {
+      setStatus('MiniFind could not load Wikipedia results right now. Check your internet connection, then try again or use Web search.');
+    }
+  }
+  $('#searchForm').addEventListener('submit', event => {
+    event.preventDefault(); const query = input.value.trim(); if (!query) { input.focus(); return; }
+    if (searchType === 'wiki') { wikipediaSearch(query); return; }
+    let url;
+    if (searchType === 'images') url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query) + '&iax=images&ia=images';
+    else if (searchType === 'videos') url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query) + '&iax=videos&ia=videos';
+    else url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query);
+    setStatus('Opening ' + (searchType === 'images' ? 'image' : searchType === 'videos' ? 'video' : 'web') + ' results for “' + query + '” in a new tab…');
+    const tab = window.open(url, '_blank');
+    if (tab) { tab.opener = null; }
+    else { results.innerHTML = ''; const link = document.createElement('a'); link.href = url; link.target='_blank'; link.rel='noopener noreferrer'; link.className='btn'; link.textContent='Open search results ↗'; results.append(link); }
+  });
+  renderSaved();
+})();
+</script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8fc">
   <title>MiniFind — A tiny search project</title>
   <style>
